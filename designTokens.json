@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#1B2A4A",
+  "accentColor": "#C9A84C",
+  "bgColor": "#FAFAF8",
+  "textColor": "#1A1A1A",
+  "fontDisplay": "Cormorant Garamond",
+  "fontBody": "DM Sans",
+  "borderRadius": "4px",
+  "layoutStyle": "editorial",
+  "uxPrinciple": "Professional reliability with elegant restraint",
+  "cssVariables": "--color-primary:#1B2A4A; --color-accent:#C9A84C; --color-bg:#FAFAF8; --color-text:#1A1A1A; --font-display:Cormorant Garamond; --font-body:DM Sans; --border-radius:4px;"
+}
