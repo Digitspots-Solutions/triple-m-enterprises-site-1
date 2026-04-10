@@ -1,0 +1,42 @@
+{
+  "businessName": "Triple-M Enterprises",
+  "industry": "Cleaning and General Services",
+  "tone": "professional and trustworthy",
+  "tagline": "Your Trusted Partner for Spotless Spaces and Quality Service",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Welcome to Triple-M Enterprises\n\nYour Trusted Partner for Spotless Spaces and Quality Service\n\nWe provide comprehensive cleaning and general services across Njikoka and Anambra State. From residential deep cleaning to commercial maintenance, Triple-M Enterprises delivers excellence with every job.\n\nGet a Free Quote Today",
+      "imagePrompt": "Professional Nigerian cleaning team in branded uniforms working in a modern, spotlessly clean commercial office space in Anambra State, bright natural lighting streaming through large windows, gleaming floors reflecting light, showing attention to detail and professionalism, photorealistic, high quality",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "About Triple-M Enterprises\n\nLocated in the heart of Njikoka, Anambra State, Triple-M Enterprises has built a reputation as the go-to provider for reliable cleaning and general services. We understand that a clean environment is essential for productivity, health, and peace of mind.\n\nOur team of trained professionals brings dedication and attention to detail to every project, whether it's a small residential cleaning job or large-scale commercial maintenance. We serve homes, offices, churches, schools, and businesses throughout Enugwu-ukwu, Njikoka LGA, and surrounding communities.\n\nAt Triple-M Enterprises, we don't just clean—we create healthier, more pleasant spaces for you to live and work. Our commitment to quality, punctuality, and customer satisfaction sets us apart in the industry.",
+      "imagePrompt": "Wide shot of Enugwu-ukwu, Njikoka landscape in Anambra State, showing clean, well-maintained residential and commercial buildings, lush green surroundings, blue sky, representing community pride and professional service standards, photorealistic, Nigerian architecture",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "What We Offer\n\nResidential Cleaning\nComprehensive home cleaning services including deep cleaning, regular maintenance, post-construction cleanup, and move-in/move-out cleaning. We handle every corner of your home with care and professionalism.\n\nCommercial Cleaning\nKeep your business space spotless and professional. We provide office cleaning, retail space maintenance, and commercial facility management tailored to your schedule and needs.\n\nGeneral Maintenance Services\nFrom minor repairs to facility upkeep, our general services team ensures your property remains in excellent condition. We handle plumbing assistance, electrical minor fixes, painting, and property maintenance.\n\nPost-Event Cleaning\nHosted an event? We'll restore your venue to pristine condition. Perfect for weddings, parties, conferences, and church gatherings throughout Njikoka and Anambra State.\n\nSpecialized Cleaning\nCarpet and upholstery cleaning, window washing, fumigation services, and waste management solutions for residential and commercial properties.\n\nAll our services are competitively priced and delivered with the highest professional standards.",
+      "imagePrompt": "Grid collage showing various cleaning scenarios in Nigerian settings: sparkling clean modern kitchen, professional office being cleaned, freshly painted wall, clean church interior, workers in Triple-M branded uniforms using professional equipment, vibrant and professional, photorealistic",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Get In Touch With Triple-M Enterprises\n\nReady to experience exceptional cleaning and general services? Contact us today for a free consultation and quote.\n\nPhone: 0816 846 9675\n\nAddress: Umuezu Awovu, Enugwu-ukwu, Njikoka LGA, Anambra State\n\nService Areas: We proudly serve Njikoka LGA and surrounding communities across Anambra State.\n\nBusiness Hours: Monday - Saturday, 7:00 AM - 6:00 PM\n\nWhether you need a one-time deep clean or ongoing maintenance services, Triple-M Enterprises is here to help. Reach out via phone or WhatsApp, and let's discuss how we can make your space shine.",
+      "imagePrompt": "Friendly Nigerian customer service representative from Triple-M Enterprises in professional uniform holding a phone and clipboard, warm welcoming smile, clean office background with company branding, natural lighting, professional and approachable atmosphere, photorealistic",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "0816 846 9675",
+    "email": "",
+    "address": "Umuezu Awovu, Enugwu-ukwu, Njikoka LGA, Anambra State",
+    "whatsapp": "https://wa.me/2348168469675"
+  }
+}
