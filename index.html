@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple-M Enterprises | Your Trusted Partner for Spotless Spaces and Quality Service</title>
+    <meta name="description" content="Triple-M Enterprises provides comprehensive cleaning and general services across Njikoka and Anambra State. Professional residential and commercial cleaning solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1B2A4A;
+            --color-accent: #C9A84C;
+            --color-bg: #FAFAF8;
+            --color-text: #1A1A1A;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --border-radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(27, 42, 74, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            font-family: var(--font-display);
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 80px 2rem;
+            background: white;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-container h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: var(--color-bg);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float::before {
+            content: "💬";
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-container {
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #hero,
+            #about,
+            #services,
+            #contact {
+                padding: 48px 1.5rem;
+            }
+
+            .about-content h2,
+            .services-container h2,
+            .contact-container h2 {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float::before {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="logo">Triple-M Enterprises</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <img src="https://images.pexels.com/photos/6196677/pexels-photo-6196677.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Professional cleaning team at work" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Triple-M Enterprises</h1>
+            <p class="tagline">Your Trusted Partner for Spotless Spaces and Quality Service</p>
+            <p>We provide comprehensive cleaning and general services across Njikoka and Anambra State. From residential deep cleaning to commercial maintenance, Triple-M Enterprises delivers excellence with every job.</p>
+            <a href="#contact" class="cta-button">Get a Free Quote Today</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="https://images.pexels.com/photos/15329526/pexels-photo-15329526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Njikoka community landscape" class="about-image">
+            <div class="about-content">
+                <h2>About Triple-M Enterprises</h2>
+                <p>Located in the heart of Njikoka, Anambra State, Triple-M Enterprises has built a reputation as the go-to provider for reliable cleaning and general services. We understand that a clean environment is essential for productivity, health, and peace of mind.</p>
+                <p>Our team of trained professionals brings dedication and attention to detail to every project, whether it's a small residential cleaning job or large-scale commercial maintenance. We serve homes, offices, churches, schools, and businesses throughout Enugwu-ukwu, Njikoka LGA, and surrounding communities.</p>
+                <p>At Triple-M Enterprises, we don't just clean—we create healthier, more pleasant spaces for you to live and work. Our commitment to quality, punctuality, and customer satisfaction sets us apart in the industry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Cleaning</h3>
+                    <p>Comprehensive home cleaning services including deep cleaning, regular maintenance, post-construction cleanup, and move-in/move-out cleaning. We handle every corner of your home with care and professionalism.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial Cleaning</h3>
+                    <p>Keep your business space spotless and professional. We provide office cleaning, retail space maintenance, and commercial facility management tailored to your schedule and needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>General Maintenance Services</h3>
+                    <p>From minor repairs to facility upkeep, our general services team ensures your property remains in excellent condition. We handle plumbing assistance, electrical minor fixes, painting, and property maintenance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Post-Event Cleaning</h3>
+                    <p>Hosted an event? We'll restore your venue to pristine condition. Perfect for weddings, parties, conferences, and church gatherings throughout Njikoka and Anambra State.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Specialized Cleaning</h3>
+                    <p>Carpet and upholstery cleaning, window washing, fumigation services, and waste management solutions for residential and commercial properties.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.05rem;">All our services are competitively priced and delivered with the highest professional standards.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Get In Touch With Triple-M Enterprises</h2>
+            <p>Ready to experience exceptional cleaning and general services? Contact us today for a free consultation and quote.</p>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> <a href="tel:08168469675">0816 846 9675</a></p>
+                <p><strong>Address:</strong> Umuezu Awovu, Enugwu-ukwu, Njikoka LGA, Anambra State</p>
+                <p><strong>Service Areas:</strong> We proudly serve Njikoka LGA and surrounding communities across Anambra State.</p>
+                <p><strong>Business Hours:</strong> Monday - Saturday, 7:00 AM - 6:00 PM</p>
+            </div>
+            <p>Whether you need a one-time deep clean or ongoing maintenance services, Triple-M Enterprises is here to help. Reach out via phone or WhatsApp, and let's discuss how we can make your space shine.</p>
+            <a href="https://wa.me/2348168469675" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <a href="https://wa.me/2348168469675" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp"></a>
+
+    <footer>
+        <p>&copy; 2024 Triple-M Enterprises. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
